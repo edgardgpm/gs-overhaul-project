@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://irdntnx7pjsd"]
+
+[ext_resource type="Script" path="res://Displays/Main/Map Editor/map_editor.gd" id="1_kyara"]
+[ext_resource type="Script" path="res://camera.gd" id="2_jaog0"]
+[ext_resource type="Script" path="res://Displays/Main/Map Editor/upload_button.gd" id="3_fcia3"]
+[ext_resource type="Texture2D" uid="uid://dxn2ttbn6r2ch" path="res://Maps/provinces.bmp" id="4_2s57q"]
+
+[node name="MapEditor" type="Node2D"]
+script = ExtResource("1_kyara")
+
+[node name="EditorCamera" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+script = ExtResource("2_jaog0")
+zoomSpeed = 12.5
+
+[node name="EditorHUD" type="CanvasLayer" parent="EditorCamera"]
+
+[node name="Panel" type="Panel" parent="EditorCamera/EditorHUD"]
+offset_left = 200.0
+offset_top = 112.0
+offset_right = 240.0
+offset_bottom = 152.0
+
+[node name="Container" type="Container" parent="EditorCamera/EditorHUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TagListButton" type="Button" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 152.0
+offset_right = 192.0
+offset_bottom = 183.0
+text = "Tag List"
+script = ExtResource("3_fcia3")
+
+[node name="LineEdit" type="LineEdit" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 344.0
+offset_right = 192.0
+offset_bottom = 375.0
+placeholder_text = "Tile Name"
+
+[node name="CheckBox" type="CheckBox" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 304.0
+offset_right = 192.0
+offset_bottom = 335.0
+text = "Fort"
+
+[node name="SpinBox" type="SpinBox" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 264.0
+offset_right = 192.0
+offset_bottom = 295.0
+alignment = 1
+suffix = "Dev"
+
+[node name="ItemList" type="ItemList" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 256.0
+select_mode = 1
+item_count = 3
+item_0/text = "Fort"
+item_1/text = "Harbor"
+item_2/text = "Pizza"
+
+[node name="Button" type="Button" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 392.0
+offset_right = 192.0
+offset_bottom = 423.0
+text = "Assign Tag"
+
+[node name="OptionButton" type="OptionButton" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 192.0
+offset_bottom = 135.0
+item_count = 2
+popup/item_0/text = "Land"
+popup/item_1/text = "Sea"
+popup/item_1/id = 1
+
+[node name="CheckButton" type="CheckButton" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 432.0
+offset_right = 192.0
+offset_bottom = 463.0
+text = "Coast Tile"
+
+[node name="PopupMenu" type="PopupMenu" parent="EditorCamera/EditorHUD"]
+visible = true
+unfocusable = true
+
+[node name="Button2" type="Button" parent="EditorCamera/EditorHUD"]
+offset_left = 64.0
+offset_top = 472.0
+offset_right = 192.0
+offset_bottom = 503.0
+text = "Save Tile"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(640, 416)
+texture = ExtResource("4_2s57q")
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="Provinces" type="Node2D" parent="Tiles"]
+
+[node name="Seas" type="Node2D" parent="Tiles"]

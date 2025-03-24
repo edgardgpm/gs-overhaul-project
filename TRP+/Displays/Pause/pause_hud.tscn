@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsgw7327q37rv"]
+
+[ext_resource type="Script" path="res://Displays/Pause/pause_hud.gd" id="1_jelg3"]
+
+[node name="PauseHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jelg3")
+
+[node name="Window" type="Window" parent="."]
+initial_position = 2
+size = Vector2i(200, 200)
+exclusive = true
+extend_to_title = true
+
+[node name="Options" type="VFlowContainer" parent="Window"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_right = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="PauseLabel" type="Label" parent="Window/Options"]
+layout_mode = 2
+text = "Game Paused"
+
+[node name="ResumeButton" type="Button" parent="Window/Options"]
+layout_mode = 2
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="Window/Options"]
+layout_mode = 2
+text = "Settings"
+
+[node name="MainButton" type="Button" parent="Window/Options"]
+layout_mode = 2
+text = "To Main"
+
+[node name="QuitButton" type="Button" parent="Window/Options"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="Window/Options/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Window/Options/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Window/Options/MainButton" to="." method="_on_main_button_pressed"]
+[connection signal="pressed" from="Window/Options/QuitButton" to="." method="_on_quit_button_pressed"]

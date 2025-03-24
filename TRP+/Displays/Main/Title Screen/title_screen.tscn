@@ -1,0 +1,114 @@
+[gd_scene load_steps=2 format=3 uid="uid://chd3cfyfb4smf"]
+
+[ext_resource type="Script" path="res://Displays/Main/Title Screen/title_screen.gd" id="1_4boe8"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4boe8")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = 88.0
+offset_right = 124.0
+offset_bottom = 111.0
+grow_horizontal = 2
+text = "Roleplay Overhaul Project (ROP)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartOptions" type="VFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="StartOptions"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="EditorButton" type="Button" parent="StartOptions"]
+layout_mode = 2
+text = "Editor"
+
+[node name="SettingsButton" type="Button" parent="StartOptions"]
+layout_mode = 2
+text = "Settings"
+
+[node name="BackButton" type="Button" parent="StartOptions"]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="LoadOptions" type="VFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.5
+offset_right = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NewButton" type="Button" parent="LoadOptions"]
+layout_mode = 2
+text = "New File"
+
+[node name="LoadButton" type="Button" parent="LoadOptions"]
+layout_mode = 2
+text = "Load File"
+
+[node name="BackButton" type="Button" parent="LoadOptions"]
+layout_mode = 2
+text = "Back"
+
+[node name="EditorOptions" type="VFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_right = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MapsButton" type="Button" parent="EditorOptions"]
+layout_mode = 2
+text = "Map Editor"
+
+[node name="ItemsButton" type="Button" parent="EditorOptions"]
+layout_mode = 2
+text = "Item Editor"
+
+[node name="BackButton" type="Button" parent="EditorOptions"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="StartOptions/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartOptions/EditorButton" to="." method="_on_editor_button_pressed"]
+[connection signal="pressed" from="StartOptions/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="StartOptions/BackButton" to="." method="_on_back_button_pressed" binds= [0]]
+[connection signal="pressed" from="LoadOptions/NewButton" to="." method="_on_new_button_pressed"]
+[connection signal="pressed" from="LoadOptions/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="LoadOptions/BackButton" to="." method="_on_back_button_pressed" binds= [1]]
+[connection signal="pressed" from="EditorOptions/MapsButton" to="." method="_on_maps_button_pressed"]
+[connection signal="pressed" from="EditorOptions/ItemsButton" to="." method="_on_items_button_pressed"]
+[connection signal="pressed" from="EditorOptions/BackButton" to="." method="_on_back_button_pressed" binds= [2]]

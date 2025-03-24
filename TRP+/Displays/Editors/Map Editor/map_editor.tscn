@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://irdntnx7pjsd"]
+
+[ext_resource type="Script" path="res://Displays/Editors/Map Editor/map_editor.gd" id="1_kyara"]
+[ext_resource type="PackedScene" uid="uid://bsgw7327q37rv" path="res://Displays/Pause/pause_hud.tscn" id="2_pfach"]
+[ext_resource type="PackedScene" uid="uid://djn7y3vf42mwe" path="res://Displays/Editors/HUDs/tile_editor_hud.tscn" id="2_plmog"]
+[ext_resource type="PackedScene" uid="uid://dqwm01kvr635h" path="res://Modules/Camera/camera.tscn" id="4_vp1ms"]
+[ext_resource type="Texture2D" uid="uid://b3wkx8a2dio15" path="res://Assets/Maps/EuropeMed/provinces.bmp" id="5_6gc63"]
+
+[node name="MapEditor" type="Node2D"]
+script = ExtResource("1_kyara")
+
+[node name="PauseHUD" parent="." instance=ExtResource("2_pfach")]
+
+[node name="TileEditorHUD" parent="." instance=ExtResource("2_plmog")]
+
+[node name="EditorCamera" parent="." instance=ExtResource("4_vp1ms")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 416)
+texture = ExtResource("5_6gc63")
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="Provinces" type="Node2D" parent="."]
+
+[connection signal="updateTileEditor" from="." to="." method="_on_update_tile_editor"]

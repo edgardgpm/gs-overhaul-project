@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://k7reth7mjw4b"]
+
+[ext_resource type="Script" path="res://Modules/Tile/Water/sea.gd" id="1_1yhnn"]
+[ext_resource type="PackedScene" uid="uid://cxyy0xxtjcp58" path="res://Modules/Tile/tile_area.tscn" id="2_bv8aj"]
+
+[node name="Sea" type="Node2D"]
+script = ExtResource("1_1yhnn")
+
+[node name="TileArea" parent="." instance=ExtResource("2_bv8aj")]

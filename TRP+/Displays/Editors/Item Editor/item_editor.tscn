@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://desmqay14068t"]
+
+[ext_resource type="Script" path="res://Displays/Editors/Item Editor/item_editor.gd" id="1_0mr4m"]
+
+[node name="ItemEditor" type="Node2D"]
+script = ExtResource("1_0mr4m")
+
+[node name="TagEditor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FileDialog" type="FileDialog" parent="TagEditor"]
+size = Vector2i(303, 180)
+
+[node name="NewTag" type="VFlowContainer" parent="TagEditor"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 576.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="TagEditor/NewTag"]
+layout_mode = 2
+placeholder_text = "Tag Name"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="TagEditor/NewTag"]
+layout_mode = 2
+text = "Tag Color"
+
+[node name="AddButton" type="Button" parent="TagEditor/NewTag"]
+layout_mode = 2
+text = "Add to List"
+
+[node name="TagList" type="VFlowContainer" parent="TagEditor"]
+layout_mode = 1
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="ItemList" type="ItemList" parent="TagEditor/TagList"]
+layout_mode = 2
+auto_height = true
+fixed_column_width = 10
+
+[node name="VScrollBar" type="VScrollBar" parent="TagEditor/TagList"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TagEditor/TagList"]
+layout_mode = 2
+text = "Add to List"
+
+[node name="LineEdit" type="LineEdit" parent="TagEditor/TagList"]
+layout_mode = 2
+placeholder_text = "Tag Name"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="TagEditor/TagList"]
+layout_mode = 2
+text = "Tag Color"
+
+[connection signal="text_changed" from="TagEditor/NewTag/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="color_changed" from="TagEditor/NewTag/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="pressed" from="TagEditor/NewTag/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="item_activated" from="TagEditor/TagList/ItemList" to="." method="_on_item_list_item_activated"]

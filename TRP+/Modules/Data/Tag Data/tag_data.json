@@ -1,0 +1,98 @@
+[
+	{
+		"NationID": "000",
+		"Nation": "Desolate",
+		"Color": "GRAY",
+		"Capital": "N/A"
+	},
+	{
+		"NationID": "001",
+		"Nation": "France",
+		"Color": "ROYAL_BLUE",
+		"Capital": "Paris"
+	},
+	{
+		"NationID": "002",
+		"Nation": "Britain",
+		"Color": "RED",
+		"Capital": "London"
+	},
+	{
+		"NationID": "003",
+		"Nation": "Austria",
+		"Color": "BLANCHED_ALMOND",
+		"Capital": "Vienna"
+	},
+	{
+		"NationID": "004",
+		"Nation": "Netherlands",
+		"Color": "ORANGE",
+		"Capital": "Amsterdam"
+	},
+	{
+		"NationID": "005",
+		"Nation": "Russia",
+		"Color": "DARK_GREEN",
+		"Capital": "Moscow"
+	},
+	{
+		"NationID": "006",
+		"Nation": "Denmark",
+		"Color": "CHOCOLATE",
+		"Capital": "Copenhagen"
+	},
+	{
+		"NationID": "007",
+		"Nation": "Sweden",
+		"Color": "CHARTREUSE",
+		"Capital": "Stockholm"
+	},
+	{
+		"NationID": "008",
+		"Nation": "Spain",
+		"Color": "GOLD",
+		"Capital": "Madrid"
+	},
+	{
+		"NationID": "009",
+		"Nation": "Ottomans",
+		"Color": "BROWN",
+		"Capital": "Constantinople"
+	},
+	{
+		"NationID": "010",
+		"Nation": "Papal State",
+		"Color": "ANTIQUE_WHITE",
+		"Capital": "Rome"
+	},
+	{
+		"NationID": "011",
+		"Nation": "Savoy-Genoa",
+		"Color": "BLANCHED_ALMOND",
+		"Capital": "Genoa"
+	},
+	{
+		"NationID": "012",
+		"Nation": "Venice",
+		"Color": "AQUAMARINE",
+		"Capital": "Venice"
+	},
+	{
+		"NationID": "013",
+		"Nation": "Prussia",
+		"Color": "DARK_SLATE_BLUE",
+		"Capital": "Berlin"
+	},
+	{
+		"NationID": "014",
+		"Nation": "Morocco",
+		"Color": "FOREST_GREEN",
+		"Capital": "Fez"
+	},
+	{
+		"NationID": "015",
+		"Nation": "Mamluks",
+		"Color": "LINEN",
+		"Capital": "Cairo"
+	}
+]

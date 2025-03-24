@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://8wl6c7m4dq27"]
+
+[ext_resource type="Script" path="res://Modules/Tile/Land/province.gd" id="1_a7qgd"]
+[ext_resource type="PackedScene" uid="uid://cxyy0xxtjcp58" path="res://Modules/Tile/tile_area.tscn" id="2_iy06c"]
+
+[node name="Province" type="Node2D"]
+script = ExtResource("1_a7qgd")
+
+[node name="TileArea" parent="." instance=ExtResource("2_iy06c")]
+
+[connection signal="toggleEditor" from="." to="." method="_on_toggle_editor"]

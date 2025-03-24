@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbymk3wsjegev"]
+
+[ext_resource type="Script" path="res://Modules/Tile/tile.gd" id="1_gh8g5"]
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_gh8g5")

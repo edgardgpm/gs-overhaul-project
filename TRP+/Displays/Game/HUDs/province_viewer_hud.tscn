@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8u84lbo4gx42"]
+
+[ext_resource type="Script" path="res://Displays/Editors/HUDs/tile_editor_hud.gd" id="1_f1x5o"]
+
+[node name="ProvinceViewerHUD" type="Node"]
+script = ExtResource("1_f1x5o")
+
+[node name="Window" type="Window" parent="."]
+title = "Tile Editor"
+position = Vector2i(25, 200)
+size = Vector2i(150, 300)
+borderless = true
+
+[node name="VFlowContainer" type="VFlowContainer" parent="Window"]
+anchors_preset = -1
+anchor_left = 0.276667
+anchor_right = 0.723333
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameEdit" type="LineEdit" parent="Window/VFlowContainer"]
+layout_mode = 2
+placeholder_text = "Name"
+
+[node name="RegionEdit" type="LineEdit" parent="Window/VFlowContainer"]
+layout_mode = 2
+placeholder_text = "Region"
+
+[node name="TerrainOptions" type="OptionButton" parent="Window/VFlowContainer"]
+layout_mode = 2
+item_count = 7
+popup/item_0/text = "Plains"
+popup/item_1/text = "Forest"
+popup/item_1/id = 1
+popup/item_2/text = "Hills"
+popup/item_2/id = 2
+popup/item_3/text = "Jungle"
+popup/item_3/id = 3
+popup/item_4/text = "Marsh"
+popup/item_4/id = 4
+popup/item_5/text = "Mountain"
+popup/item_5/id = 5
+popup/item_6/text = "Desert"
+popup/item_6/id = 6
+
+[node name="ResourceList" type="ItemList" parent="Window/VFlowContainer"]
+layout_mode = 2
+allow_reselect = true
+item_count = 4
+item_1/text = "Oil"
+item_2/text = "Wood"
+item_3/text = "Pizza"
+
+[node name="DevSpin" type="SpinBox" parent="Window/VFlowContainer"]
+layout_mode = 2
+alignment = 1
+suffix = "Dev"
+
+[node name="TagAssignButton" type="Button" parent="Window/VFlowContainer"]
+layout_mode = 2
+text = "Assign Tag"
+
+[node name="CoastCheck" type="CheckButton" parent="Window/VFlowContainer"]
+layout_mode = 2
+disabled = true
+text = "Coast Tile"
+
+[node name="SaveChangesButton" type="Button" parent="Window/VFlowContainer"]
+layout_mode = 2
+text = "Save Tile"
+
+[connection signal="item_selected" from="Window/VFlowContainer/TerrainOptions" to="." method="_on_terrain_options_item_selected"]
+[connection signal="item_activated" from="Window/VFlowContainer/ResourceList" to="." method="_on_resource_list_item_activated"]
+[connection signal="pressed" from="Window/VFlowContainer/TagAssignButton" to="." method="_on_tag_assign_button_pressed"]
+[connection signal="pressed" from="Window/VFlowContainer/SaveChangesButton" to="." method="_on_save_changes_button_pressed"]

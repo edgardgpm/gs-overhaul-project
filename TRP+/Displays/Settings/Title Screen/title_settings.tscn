@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfcjmmnapyqws"]
+
+[ext_resource type="Script" path="res://Displays/Settings/Title Screen/title_settings.gd" id="1_7yyg0"]
+
+[node name="TitleSettings" type="Node"]
+script = ExtResource("1_7yyg0")
+
+[node name="ControlNode" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Labels" type="VFlowContainer" parent="ControlNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SomeLabel" type="Label" parent="ControlNode/Labels"]
+layout_mode = 2
+text = "Testing!"
+
+[node name="Options" type="VFlowContainer" parent="ControlNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="FullscreenButton" type="Button" parent="ControlNode/Options"]
+layout_mode = 2
+text = "Toggle Fullscreen"
+
+[node name="CreditsButton" type="Button" parent="ControlNode/Options"]
+layout_mode = 2
+text = "Credits"
+
+[node name="BackButton" type="Button" parent="ControlNode/Options"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="ControlNode/Options/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="ControlNode/Options/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="ControlNode/Options/BackButton" to="." method="_on_back_button_pressed"]

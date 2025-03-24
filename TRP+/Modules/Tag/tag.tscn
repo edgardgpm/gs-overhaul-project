@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ug5eked1lea"]
+
+[ext_resource type="Script" path="res://Modules/Tag/tag.gd" id="1_2cq78"]
+
+[node name="Tag" type="Node"]
+script = ExtResource("1_2cq78")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2q7aqd6gxe06"]
+
+[ext_resource type="Script" path="res://Displays/Game/game_map.gd" id="1_noooc"]
+[ext_resource type="PackedScene" uid="uid://bsgw7327q37rv" path="res://Displays/Pause/pause_hud.tscn" id="2_qreuf"]
+[ext_resource type="PackedScene" uid="uid://dqwm01kvr635h" path="res://Modules/Camera/camera.tscn" id="3_doqji"]
+
+[node name="GameMap" type="Node2D"]
+script = ExtResource("1_noooc")
+
+[node name="PauseHUD" parent="." instance=ExtResource("2_qreuf")]
+
+[node name="Camera" parent="." instance=ExtResource("3_doqji")]
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="Provinces" type="Node2D" parent="."]

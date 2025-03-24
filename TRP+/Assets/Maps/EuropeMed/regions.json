@@ -1,0 +1,82 @@
+[
+	{
+		"RegionID": "001",
+		"Region": "France",
+		"Color": "ROYAL_BLUE"
+	},
+	{
+		"RegionID": "002",
+		"Region": "Britain",
+		"Color": "RED"
+	},
+	{
+		"RegionID": "003",
+		"Region": "Russia",
+		"Color": "DARK_GREEN"
+	},
+	{
+		"RegionID": "004",
+		"Region": "Poland",
+		"Color": "CRIMSON"
+	},
+	{
+		"RegionID": "005",
+		"Region": "Germany",
+		"Color": "BLANCHED_ALMOND"
+	},
+	{
+		"RegionID": "006",
+		"Region": "Netherlands",
+		"Color": "ORANGE"
+	},
+	{
+		"RegionID": "007",
+		"Region": "Scandinavia",
+		"Color": "CHARTREUSE"
+	},
+	{
+		"RegionID": "008",
+		"Region": "Iberia",
+		"Color": "GOLD"
+	},
+	{
+		"RegionID": "009",
+		"Region": "Arabia",
+		"Color": "BURLYWOOD"
+	},
+	{
+		"RegionID": "010",
+		"Region": "Anatolia",
+		"Color": "BROWN"
+	},
+	{
+		"RegionID": "011",
+		"Region": "Italy",
+		"Color": "YELLOW_GREEN"
+	},
+	{
+		"RegionID": "012",
+		"Region": "Balkans",
+		"Color": "BLANCHED_ALMOND"
+	},
+	{
+		"RegionID": "013",
+		"Region": "Iran",
+		"Color": "DARK_SEA_GREEN"
+	},
+	{
+		"RegionID": "014",
+		"Region": "Maghreb",
+		"Color": "FOREST_GREEN"
+	},
+	{
+		"RegionID": "015",
+		"Region": "Egypt",
+		"Color": "LINEN"
+	},
+	{
+		"RegionID": "016",
+		"Region": "Steppe",
+		"Color": "CORNFLOWER_BLUE"
+	}
+]

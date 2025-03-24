@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://irdntnx7pjsd"]
+
+[ext_resource type="Script" path="res://Displays/Main/Map Editor/map_editor.gd" id="1_kyara"]
+[ext_resource type="Script" path="res://camera.gd" id="2_jaog0"]
+[ext_resource type="Script" path="res://Displays/Main/Map Editor/upload_button.gd" id="3_fcia3"]
+[ext_resource type="Texture2D" uid="uid://dxn2ttbn6r2ch" path="res://Maps/provinces.bmp" id="4_2s57q"]
+
+[node name="MapEditor" type="Node2D"]
+script = ExtResource("1_kyara")
+
+[node name="EditorCamera" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+script = ExtResource("2_jaog0")
+zoomSpeed = 12.5
+
+[node name="UploadButton" type="Button" parent="EditorCamera"]
+offset_left = -512.0
+offset_top = -288.0
+offset_right = -410.0
+offset_bottom = -257.0
+text = "Upload Files"
+script = ExtResource("3_fcia3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 416)
+texture = ExtResource("4_2s57q")
+
+[node name="Provinces" type="Node2D" parent="."]
